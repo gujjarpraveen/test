@@ -59,11 +59,11 @@
       })
       .then(response => response.text())
       .then(result => {
-        document.getElementById('status').textContent = '? Data sent successfully!';
+        document.getElementById('status').textContent = 'Data sent successfully!';
         setTimeout(() => location.reload(), 3000); // Restart after 3 seconds
       })
       .catch(error => {
-        document.getElementById('status').textContent = '? Failed to send data.';
+        document.getElementById('status').textContent = 'Failed to send data.';
         console.error('Send error:', error);
       });
     }
@@ -82,7 +82,7 @@
     // Start scanning on button click
     document.getElementById("startScanBtn").addEventListener("click", () => {
       document.getElementById("reader").style.display = "block";
-      document.getElementById('status').textContent = '?? Starting camera...';
+      document.getElementById('status').textContent = ' Starting camera...';
       html5QrCode.start(
         { facingMode: "environment" },
         { fps: 10, qrbox: { width: 250, height: 250 } },
